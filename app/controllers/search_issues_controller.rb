@@ -3,7 +3,7 @@ class SearchIssuesController < ApplicationController
 
   include RedmineDidYouMean
 
-  before_filter :find_project, :get_query, :get_project_filter, :get_limit
+  before_action :find_project, :get_query, :get_project_filter, :get_limit
 
 
   def index

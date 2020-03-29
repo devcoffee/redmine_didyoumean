@@ -11,7 +11,7 @@ module TSMonkeyPatch
         perform_without_dym
       end
       alias_method :perform_without_dym, :perform
-      alias_method :dym, :perform_with_dym
+      alias_method :perform, :perform_with_dym
     end
   end
 end
