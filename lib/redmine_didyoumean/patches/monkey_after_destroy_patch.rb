@@ -10,7 +10,8 @@ module TSMonkeyPatch
         return name == 'issue_core' && Setting.plugin_redmine_didyoumean['search_method'] != '1'
         perform_without_dym
       end
-      alias_method_chain :perform, :dym
+      alias_method :perform_with_dym, :perform
+      alias_method :dym, :perform_without_dym
     end
   end
 end
